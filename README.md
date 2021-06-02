@@ -1,2 +1,2 @@
 # AndroidDev
-Android Development in Android Studio
+Android Studio Development @ EC Utbildning Växjö/Ronneby
