@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">W22Shake</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_accel_fragment">Accelerometer info: </string>
+</resources>
