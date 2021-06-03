@@ -2,4 +2,7 @@
     <string name="app_name">W22Shake</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_accel_fragment">Accelerometer info: </string>
+    <string name="theQuote">Windows, Linux or OSX - That\'s the question!</string>
+    <string name="picDesc">A Linux penguin</string>
+
 </resources>

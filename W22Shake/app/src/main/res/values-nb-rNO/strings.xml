@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">W22Shake</string>
+    <string name="theQuote">Windows, Linux eller OSX - Det er spörsmålet!</string>
+    <string name="picDesc">En Linux pingvin</string>
+    <string name="hello_accel_fragment">Accelerator info:</string>
+</resources>
