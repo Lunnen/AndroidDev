@@ -1,0 +1,2 @@
+rootProject.name = "W23LifeCycle"
+include ':app'
