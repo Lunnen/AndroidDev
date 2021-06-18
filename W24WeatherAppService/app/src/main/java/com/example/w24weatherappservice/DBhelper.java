@@ -66,6 +66,8 @@ public class DBhelper extends SQLiteOpenHelper {
         // .insert returns the PK for the new row
         long value_id = db.insert(TABLE_NAME, null, contentValues);
 
+        db.close();
+
         if (value_id == -1) {
             Log.d("SET", "addValue: Something didnt work");
             return false;
@@ -73,6 +75,7 @@ public class DBhelper extends SQLiteOpenHelper {
             Log.d("SET", "addValue: All is well");
             return true;
         }
+
     }
 
     public ArrayList<WeatherBean> getValue(ArrayList<WeatherBean> valuesInDb) {

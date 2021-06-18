@@ -1,7 +1,10 @@
 package com.example.w24weatherappservice;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private String API_KEY = "6bf857e0a33bab6a90b16bb248eabb7d";
     private String language = "sv"; //SE = Sapmi, SV = Swedish
 
-    private final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
+    private final String API_URL = "https://api.openweathermap.org/data/2.5/weather";
     private final String languageString = "&lang=" + language;
 
     private DBhelper dBhelper;
@@ -62,9 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
         dBhelper = new DBhelper(MainActivity.this);
 
+        setAlarm();
     }
 
     public void fetchWeatherData(View view){
+
         String city = chosenCity.getText().toString().trim();
 
         String queryText = (API_URL + "?q=" + city + "&appid=" + API_KEY + languageString + "&units=metric");
@@ -148,8 +153,6 @@ public class MainActivity extends AppCompatActivity {
                     startNotificationService(sendTitle,sendMessage,sendImg);
                     //--------------------------------------------
 
-
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -200,5 +203,14 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
     }
 
+    private void setAlarm() {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        Intent intent = new Intent(this, MyReceiver.class);
+
+        PendingIntent sender = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+        long firstTime = 5000 + SystemClock.elapsedRealtime();
+
+        alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, firstTime, 60000, sender);}
 
 }
