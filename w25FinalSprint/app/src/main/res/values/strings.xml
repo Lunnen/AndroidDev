@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">w25FinalSprint</string>
+
+    // MAIN
+    <string name="speak_btn">Talk</string>
+    <string name="result">What you said:</string>
+    <string name="translationView">Translate to -> </string>
+    <string name="save_btn">Save</string>
+    <string name="translate_btn">Show</string>
+    <string name="showDb">Show database</string>
+
+    //dbvalue_layout
+    <string name="orgLang">Play original language</string>
+    <string name="transLang">Play translated language</string>
+
+    //activity_db_show
+    <string name="database">Database:</string>
+    <string name="goBack">Go back</string>
+    <string name="eraseAll">Erase all</string>,
+
+    <string name="delAllDb">Delete ENTIRE database?</string>
+    <string name="delAllDbSure">Are you sure you want to delete everything?</string>
+    <string name="delSpecDb">Delete this entry?</string>
+    <string name="delSpecDbSure">Are you sure you want to delete this entry?"</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
