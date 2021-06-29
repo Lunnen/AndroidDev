@@ -66,19 +66,12 @@ public class DbShowActivity extends AppCompatActivity {
             }
         });
 
-
-
         valueAdapter.setOnItemClickListener(new ValueAdapter.OnItemClickListener() {
             /*
             @Override
             public void onItemClick(int position) {
-
                 toSpeechOrg.speak(myValues.get(position).getOriginText(), TextToSpeech.QUEUE_FLUSH, null);
-            }
-
-             */
-
-
+            }*/
 
             @Override
             public void onPushPlayOrg(int position) {
@@ -136,7 +129,7 @@ public class DbShowActivity extends AppCompatActivity {
 
     public void gotoView(View view){
         Intent nextIntent = new Intent(this, MainActivity.class);
-        nextIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        nextIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(nextIntent);
 
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);

@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode==0 && resultCode== RESULT_OK){
             ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            Log.d("speak", "onActivityResult: " + results.get(0));
-
             resultView.setText(results.get(0));
 
         }
@@ -225,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void gotoDb(View view){
         Intent nextIntent = new Intent(this, DbShowActivity.class);
-        nextIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        nextIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(nextIntent);
 
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
