@@ -129,7 +129,7 @@ public class DbShowActivity extends AppCompatActivity {
 
     public void gotoView(View view){
         Intent nextIntent = new Intent(this, MainActivity.class);
-        nextIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        nextIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(nextIntent);
 
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
